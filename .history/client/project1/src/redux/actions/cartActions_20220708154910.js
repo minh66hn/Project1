@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
   const { data } = await axios.get(
-    `/api/products/${id}`
+    `https://vanmingshop.netlify.app/api/products/${id}`
   );
 
   dispatch({
