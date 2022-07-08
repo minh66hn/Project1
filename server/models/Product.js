@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const productSchema = new mongoose.Schema({
+const productSchema = mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -15,6 +15,10 @@ const productSchema = new mongoose.Schema({
   },
   countInStock: {
     type: Number,
+    required: true,
+  },
+  imageUrl: {
+    type: String,
     required: true,
   },
 });

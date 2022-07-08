@@ -1,29 +1,33 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import HomeScreens from "./screens/HomeScreens";
-import ProductScreens from "./screens/ProductScreens";
-import CartScreens from "./screens/CartScreens";
+import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Components
 import Navbar from "./components/Navbar";
+import SideDrawer from "./components/SideDrawer";
+import Backdrop from "./components/Backdrop";
+
+// Screens
+import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen";
+
 function App() {
+  const [sideToggle, setSideToggle] = useState(false);
+
   return (
-    <div>
-      <Router>
-        {/*Navbar*/}
-        <Navbar></Navbar>
-        {/*SideDrawer*/}
-        {/*Backdrop*/}
-        <main>
-          <Switch>
-            <Route path="/" component={HomeScreens} />
-            <Route path="/product/:id" component={ProductScreens} />
-            <Route path="/cart" component={CartScreens} />
-          </Switch>
-        </main>
-        {/*HomeScreen*/}
-        {/*ProductScreen*/}
-        {/*CartScreen*/}
-      </Router>
-    </div>
+    <Router>
+      <Navbar click={() => setSideToggle(true)} />
+      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
+      <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
+      <main className="app">
+        <Switch>
+          <Route exact path="/" component={HomeScreen} />
+          <Route exact path="/product/:id" component={ProductScreen} />
+          <Route exact path="/cart" component={CartScreen} />
+        </Switch>
+      </main>
+    </Router>
   );
 }
 
