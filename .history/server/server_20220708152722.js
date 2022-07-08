@@ -15,5 +15,5 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes);
 
-const PORT = "https://glacial-brushlands-41440.herokuapp.com"
+const PORT = "https://glacial-brushlands-41440.herokuapp.com""
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
