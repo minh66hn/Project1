@@ -47,7 +47,7 @@ const AddProduct = () => {
           <Form.Control
             type="text"
             placeholder="Tên sản phẩm"
-            name="nameproduct"
+            name="nameProduct"
             required
             value={nameproduct}
             onChange={onChangeAddProductForm}
@@ -77,9 +77,9 @@ const AddProduct = () => {
           <Form.Control
             type="number"
             placeholder="Số lượng"
-            name="countInStock"
+            name="quantity"
             required
-            value={countInStock}
+            value={quantity}
             onChange={onChangeAddProductForm}
           />
         </Form.Group>

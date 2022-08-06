@@ -77,9 +77,9 @@ const AddProduct = () => {
           <Form.Control
             type="number"
             placeholder="Số lượng"
-            name="countInStock"
+            name="quantity"
             required
-            value={countInStock}
+            value={quantity}
             onChange={onChangeAddProductForm}
           />
         </Form.Group>

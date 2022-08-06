@@ -4,8 +4,8 @@ const postProduct = async (req, res) => {
   const { imageUrl, nameproduct, description, price, countInStock } = req.body;
   try {
     console.log(imageUrl);
-    console.log(nameproduct);
-    console.log(description);
+    console.log(imageUrl);
+    console.log(imageUrl);
     const newProduct = await new Product({
       imageUrl,
       nameproduct,

@@ -5,8 +5,8 @@ const postProduct = async (req, res) => {
   try {
     console.log(imageUrl);
     console.log(nameproduct);
-    console.log(description);
     const newProduct = await new Product({
+      console.log(description);
       imageUrl,
       nameproduct,
       description,

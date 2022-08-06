@@ -14,7 +14,7 @@ const AddProduct = () => {
     countInStock: "",
   });
 
-  const { imageUrl, nameproduct, description, price, countInStock } =
+  const { imageUrl, nameProduct, description, price, countInStock } =
     addProductForm;
   const onChangeAddProductForm = (event) =>
     setAddProductForm({
@@ -37,9 +37,9 @@ const AddProduct = () => {
           <Form.Control
             type="text"
             placeholder="Điền Link ảnh sản phẩm"
-            name="imageUrl"
+            name="urlproduct"
             required
-            value={imageUrl}
+            value={urlproduct}
             onChange={onChangeAddProductForm}
           />
         </Form.Group>
@@ -47,9 +47,9 @@ const AddProduct = () => {
           <Form.Control
             type="text"
             placeholder="Tên sản phẩm"
-            name="nameproduct"
+            name="nameProduct"
             required
-            value={nameproduct}
+            value={nameProduct}
             onChange={onChangeAddProductForm}
           />
         </Form.Group>
@@ -77,9 +77,9 @@ const AddProduct = () => {
           <Form.Control
             type="number"
             placeholder="Số lượng"
-            name="countInStock"
+            name="quantity"
             required
-            value={countInStock}
+            value={quantity}
             onChange={onChangeAddProductForm}
           />
         </Form.Group>

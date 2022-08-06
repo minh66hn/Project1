@@ -16,7 +16,7 @@ const AuthContextProvider = ({ children }) => {
     try {
       console.log(newProduct);
       const response = await axios.post("http://localhost:5000/api/products", newProduct);
-      console.log(response);
+      console.log("1");
     } catch (error) {
       console.log("2");
     }
